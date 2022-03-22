@@ -4,6 +4,8 @@ package com.example.application.views;
 import com.example.application.views.about.AboutView;
 import com.example.application.views.helloworld.HelloWorldView;
 import com.example.application.views.list.ListView;
+import com.example.application.views.person.PersonLazyView;
+import com.example.application.views.person.PersonView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -120,11 +122,15 @@ public class MainLayout extends AppLayout {
 
     private MenuItemInfo[] createMenuItems() {
         return new MenuItemInfo[]{ //
-                new MenuItemInfo("Hello World", "la la-globe", HelloWorldView.class), //
+//                new MenuItemInfo("Hello World", "la la-globe", HelloWorldView.class), //
 
-                new MenuItemInfo("About", "la la-file", AboutView.class), //
+//                new MenuItemInfo("About", "la la-file", AboutView.class), //
 
-                new MenuItemInfo("List", "la la-th", ListView.class), //
+//                new MenuItemInfo("List", "la la-th", ListView.class), //
+
+                new MenuItemInfo("Person", "la la-th", PersonView.class), //
+
+                new MenuItemInfo("Person (lazy load)", "la la-th", PersonLazyView.class), //
 
         };
     }
